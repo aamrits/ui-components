@@ -1,0 +1,215 @@
+/***
+IMPORT FONTS
+*/
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+/***
+RESET STYLES
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  overflow: auto;
+  line-height: 1.5;
+}
+
+/***
+GRID STYLES
+*/
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1800px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col,
+.col-25, 
+.col-50, 
+.col-75,
+.col-100 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col {
+  flex: 1 0 0%;
+}
+
+@media (min-width: 768px) {
+  .col-25 {
+    flex: 0 0 auto;
+    max-width: 25%;
+  }
+  
+  .col-50 {
+    flex: 0 0 auto;
+    max-width: 50%;
+  }
+  
+  .col-75 {
+    flex: 0 0 auto;
+    max-width: 75%;
+  }
+
+  .col-100 {
+    flex: 0 0 auto;
+    max-width: 100%;
+  }
+}
+
+
+/***
+HEADING STYLES
+*/
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+  font-family: 'JetBrains Mono', monospace;
+  margin: 1rem 0;
+}
+
+h1 {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+
+/***
+COMPONENT STYLES
+*/
+a {
+  text-decoration: none;
+  color: #1565C0;
+}
+
+.btn {
+  display: inline-block;
+  background: transparent;
+  outline: none;
+  height: 35px;
+  font-size: 1rem;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  transition: all 0.2s ease-in;
+}
+
+.btn:hover {
+  background: rgba(0,0,0,0.2);
+}
+
+.img-fluid {
+  width: 100%;
+}
+
+/***
+UTILITY STYLES
+*/
+.p-15 {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+.pt-15 {
+  padding-top: 15px !important;
+}
+
+.pb-15 {
+  padding-bottom: 15px !important;
+}
+
+.pl-0 {
+  padding-left: 0px !important;
+}
+
+.pr-0 {
+  padding-right: 0px !important;
+}
+
+.mt-15 {
+  margin-top: 15px !important;
+}
+
+.mb-15 {
+  margin-bottom: 15px !important;
+}
+
+.ml-15 {
+  margin-left: 15px !important;
+}
+
+.mr-15 {
+  margin-right: 15px !important;
+}
+
+.ml-0 {
+  margin-left: 0px !important;
+}
+
+.mr-0 {
+  margin-right: 0px !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
