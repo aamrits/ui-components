@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <title>Dynamic Tabs</title>
+</head>
+<body class="dark">
+  <section>
+    <div class="sidebar-container" id="sidebar">
+      <h3 class="sidebar-title">
+        <a href="../index.html">Home</a>
+      </h3>
+      <ul class="sidebar-list">
+        <li><a href="index.html">Dynamic Tabs</a></li>
+        <li><a href="../image-slider/index.html">Image Slider</a></li>
+      </ul>
+    </div>
+    <div class="btn-closed" id="btnClose">
+      <img src="../chevron-double-right.svg" alt="menu-icon" >
+    </div>
+
+    <div class="main">
+      <h2 class="main-title">Dynamic Tabs</h2>
+
+      <section id="tabs">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <ul class="tab-header">
+                <li data-tab-target="#home" class="tab active">Home</li>
+                <li data-tab-target="#about" class="tab">About</li>
+                <li data-tab-target="#contact" class="tab">Contact</li>
+              </ul>
+              <div class="tab-content">
+                <div id="home" class="tab-pane active">
+                  <h4>Home page</h4>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officia perferendis dolorum accusamus voluptatem atque consectetur placeat ratione nostrum necessitatibus vitae illum, libero, repudiandae minus veritatis nemo aperiam culpa reiciendis.
+                </div>
+                <div id="about" class="tab-pane">
+                  <h4>About page</h4>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officia perferendis dolorum accusamus voluptatem atque consectetur placeat ratione nostrum necessitatibus vitae illum, libero, repudiandae minus veritatis nemo aperiam culpa reiciendis.
+                </div>
+                <div id="contact" class="tab-pane">
+                  <h4>Contact page</h4>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officia perferendis dolorum accusamus voluptatem atque consectetur placeat ratione nostrum necessitatibus vitae illum, libero, repudiandae minus veritatis nemo aperiam culpa reiciendis.
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END ROW -->
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <footer>
+    <p>Designed & Developed by Amrit.</p>
+  </footer>
+
+  <script src="../assets/main.js"></script>
+  <script>
+    // grab all li in .tab-header
+    // grab all .tab-pane in .tab-content
+    // loop through each li of .tab-header
+    // for each li add a click event listener
+    // get the corresponding html of each clicked li (connected by unique ID)
+    // add .active class to that html. Before that remove all other .active classes by looping through '.tab-content'.
+    // also add .active class to that li of .tab-header. Before that remove all other .active classes by looping through all li of '.tab-header'.
+
+    let tabs = document.querySelectorAll('[data-tab-target]');
+    let tabContents = document.querySelectorAll('.tab-pane');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = document.querySelector(tab.dataset.tabTarget);
+        tabs.forEach(tab => {
+          tab.classList.remove('active');
+        })
+        tabContents.forEach(tabContent => {
+          tabContent.classList.remove('active');
+        })
+        tab.classList.add('active');
+        target.classList.add('active');
+      })
+    });
+  </script>
+</body>
+</html>
+
+

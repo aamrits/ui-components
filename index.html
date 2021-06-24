@@ -3,20 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="core.css">
+  <link rel="stylesheet" href="./assets/styles.css">
   <title>UI Components</title>
 </head>
-<body>
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <h1 class="text-center">UI Components</h1>
-
-        <ul>
-          <li><a href="tabs/tabs.html">Dynamic Tabs</a></li>
-        </ul>
-      </div>
+<body class="dark">
+  <section>
+    <div class="sidebar-container" id="sidebar">
+      <h3 class="sidebar-title">
+        <a href="../index.html">Home</a>
+      </h3>
+      <ul class="sidebar-list">
+        <li><a href="tabs/index.html">Dynamic Tabs</a></li>
+        <li><a href="image-slider/index.html">Image Slider</a></li>
+      </ul>
     </div>
-  </div>
+    <div class="btn-closed" id="btnClose">
+      <img src="./chevron-double-right.svg" alt="menu-icon" >
+    </div>
+
+    <div class="main">
+      <h2 class="main-title">Home Page</h2>
+
+      <p class="text-center">Open sidebar and navigate.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Designed & Developed by Amrit.</p>
+  </footer>
+
+  <script src="./assets/main.js"></script>
 </body>
 </html>
